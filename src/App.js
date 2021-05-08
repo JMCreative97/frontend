@@ -6,7 +6,7 @@ import  history from './History';
 import { Col, Container, Row, Form, FormControl, Button, Navbar, Nav, DropdownButton, Dropdown, InputGroup } from 'react-bootstrap';
 import { Link, Router, Switch, Route } from 'react-router-dom';
 import { connect } from "react-redux";
-
+import Logo from "./img/logo.png";
 import Home from './Home';
 import CreateProduct from './CreateProduct';
 import AllProducts from './AllProducts';
@@ -34,10 +34,10 @@ class App extends Component {
     return (
       <div>
        <Router history={history}>
-        <Container className="w-100 mt-5 mb-5" form-inline>
-          <Row className="justify-content-center" sm={12} >
+        <Container id="top-container" className="w-100 mt-5 mb-5" form-inline>
+          <Row  className="justify-content-center" sm={12} >
             <Col md={2} xs={2} className="text-center align-middle">
-              <Link to={'/'}>LOGO</Link>
+              <Link to={'/'}><img id="brand-logo" src={Logo}/></Link>
             </Col>
             <Col md={6} xs={6} className="text-align-center text-center d-flex justify-content-center">
               <Form inline>
@@ -87,13 +87,12 @@ class App extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-auto"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto w-100 d-flex " id="navbar">
-              <Nav.Link href="">Senior</Nav.Link>
-              <Nav.Link href="">Junior</Nav.Link>
-              <Nav.Link href="">Accessories</Nav.Link>
-              <Nav.Link href="">Carry & Store</Nav.Link>
-              <Nav.Link href="">Training Clothing</Nav.Link>
-              <Nav.Link href="">Floor Marking</Nav.Link>
-              <Nav.Link href="">Cones</Nav.Link>
+            <Nav.Link href="">Home</Nav.Link>
+              <Nav.Link href="">Football Goals</Nav.Link>
+              <Nav.Link href="">Footballs</Nav.Link>
+              <Nav.Link href="">About</Nav.Link>
+              <Nav.Link href="">Contact</Nav.Link>
+              <Nav.Link href="">Help</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

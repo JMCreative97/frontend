@@ -3,7 +3,30 @@ import axios from 'axios';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import landingImg from './img/landing-img.png';
 import history from './History';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPoundSign, faWarehouse, faPallet, faFutbol } from '@fortawesome/free-solid-svg-icons'
 
+
+
+class InfoBox extends Component {
+  constructor(props){
+    super(props);
+    this.state = { };
+  
+  }
+
+  render(){
+    return (
+      <div id="infobox">
+        <img src={this.props.url}/>
+        <div id="infobox-text">
+          <h2>{this.props.title}</h2>
+          <p>{this.props.description}</p>
+        </div>
+      </div>
+    );
+  }
+}
 
 
 class Home extends Component {
@@ -34,7 +57,7 @@ class Home extends Component {
             <Col className="text-center">
               <h1>IN-STOCK</h1>
               <h3>Click below to look through our available items</h3>
-              <Button variant="primary" className="mt-2" onClick={() => history.push('/all') }>Our Stock →</Button>
+              <Button variant="primary" className="mt-2" onClick={() => history.push('/all') }>GET STARTED</Button>
             </Col>
           </Row>
         </Container>
@@ -43,7 +66,7 @@ class Home extends Component {
             <Col lg={3} xs={12} className="mt-5 mt-lg-0" >
               <Row> 
                 <Col id="info-img" xs={4}>
-
+                  <FontAwesomeIcon icon={faPoundSign}/>
                 </Col>
                 <Col xs={8} className="d-flex justify-content-center align-items-center"> 
                    <h4>Free delivery on orders over £20*</h4>
@@ -53,7 +76,7 @@ class Home extends Component {
             <Col lg={3} xs={12} className="mt-5 mt-lg-0" >
             <Row>
                 <Col id="info-img" xs={4}>
-                
+                  <FontAwesomeIcon icon={faWarehouse}/>
                 </Col>
                 <Col xs={8}  className="d-flex justify-content-center align-items-center">
                    <h4>Free delivery on orders over £20*</h4>
@@ -63,7 +86,7 @@ class Home extends Component {
             <Col lg={3} xs={12} className="mt-5 mt-lg-0" >
             <Row>
                 <Col id="info-img" xs={4}>
-                
+                  <FontAwesomeIcon icon={faPallet}/>
                 </Col>
                 <Col xs={8}  className="d-flex justify-content-center align-items-center">
                    <h4>Free delivery on orders over £20*</h4>
@@ -73,7 +96,7 @@ class Home extends Component {
             <Col lg={3} xs={12} className="mt-5 mt-lg-0" >
               <Row>
                   <Col id="info-img" xs={4}>
-                  
+                  <FontAwesomeIcon icon={faFutbol}/>
                   </Col>
                   <Col xs={8}  className="d-flex justify-content-center align-items-center">
                     <h4>Free delivery on orders over £20*</h4>
@@ -85,9 +108,11 @@ class Home extends Component {
         </Container>
 
 
+        <div id="home-info-section">
+          <InfoBox title="Quality Products" description="blah blah blah" url="https://via.placeholder.com/300"/>
 
 
-      
+        </div>
         
       </div>
     )

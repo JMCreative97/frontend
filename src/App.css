@@ -1,5 +1,21 @@
+* { 
+  font-family: 'Russo One', sans-serif;
+}
+
+#brand-logo {
+  width: 10rem;
+}
+
+#top-container > * {
+
+align-self: center;}
 #navbar {
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
+}
+#navbar > * {
+
+  margin: 1rem 1.75% 1rem 1.75%; 
 }
 
 #home-bg {
@@ -22,7 +38,8 @@
 #info-img {
   height: 5rem;
   width: 5rem;
-  background-color: #309CFF;
+  font-size: 3rem;
+  color: #2FB0F9;
 }
 
 #login-container {
@@ -36,5 +53,38 @@
   border-radius: 1rem;
   padding: 3rem;
   max-width: 30rem;
+}
+
+#home-info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+#infobox {
+  display: flex;
+  width: 30rem;
+
+}
+
+#infobox-text {
+  margin: 0rem 0rem 0rem 1rem;
+}
+
+#infobox-text > h2{
+  width: 20rem;
+  margin-bottom: 1.5rem;
+}
+
+#infobox-text > h2::before {
+  content: "";
+  background-position: 0 0;
+  position: absolute;
+  transform: translateY(2.8rem);
+  background-color: #2FB0F9;
+  width: 15rem;
+  height: 0.5rem;
+
 }
 
